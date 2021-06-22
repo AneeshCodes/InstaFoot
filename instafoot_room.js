@@ -28,17 +28,28 @@ function addroom() {
       firebase.database().ref("/").child(roomname).update({
             roomname: "value"
       })
+
+      localStorage.setItem('Room_Name', roomname);
+      /*window.location = "instafoot_page.html"*/
 }
 
 function getData() {
       firebase.database().ref("/").on('value', function (snapshot) {
-            document.getElementById("output").innerHTML = ""; snapshot.forEach(function (childSnapshot) {
+            document.getElementById("trendingrooms").innerHTML = ""; snapshot.forEach(function (childSnapshot) {
                   childKey = childSnapshot.key;
                   Room_names = childKey;
                   //Start code
-
+                  row = "<div class='room_name' id=" + Room_names + " onclick='redirectToRoomName(this.id)'> #" + Room_names + "</div><hr>"
+                  document.getElementById('trendingrooms').innerHTML +=  row; 
                   //End code
             });
       });
 }
 getData();
+
+function redirectToRoomName(name)
+{
+  console.log(name);
+  localStorage.setItem('Room_Name', name)
+  /*window.location = "instafoot_page.html"*/
+}
