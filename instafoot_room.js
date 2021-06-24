@@ -30,7 +30,7 @@ function addroom() {
       })
 
       localStorage.setItem('Room_Name', roomname);
-      /*window.location = "instafoot_page.html"*/
+      window.location = "instafoot_page.html"
 }
 
 function getData() {
@@ -51,5 +51,5 @@ function redirectToRoomName(name)
 {
   console.log(name);
   localStorage.setItem('Room_Name', name)
-  /*window.location = "instafoot_page.html"*/
+  window.location = "instafoot_page.html"       
 }
