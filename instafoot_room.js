@@ -4,18 +4,19 @@ document.getElementById('username').innerHTML = "Welcome to InstaFoot " + userna
 //ADD YOUR FIREBASE LINKS HERE
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
-      apiKey: "AIzaSyBbnoC3DASnA7AHmq-9tVA1B2O-5AaDk-c",
-      authDomain: "instafoot-35022.firebaseapp.com",
-      databaseURL: "https://instafoot-35022-default-rtdb.firebaseio.com",
-      projectId: "instafoot-35022",
-      storageBucket: "instafoot-35022.appspot.com",
-      messagingSenderId: "844807225084",
-      appId: "1:844807225084:web:506852c637a0a172056179"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
+var firebaseConfig = {
+      apiKey: "AIzaSyC0xqt0EWw_oe1EeqrUuiRk18UcPW8X33w",
+      authDomain: "insta-foot.firebaseapp.com",
+      databaseURL: "https://insta-foot-default-rtdb.firebaseio.com",
+      projectId: "insta-foot",
+      storageBucket: "insta-foot.appspot.com",
+      messagingSenderId: "502487673628",
+      appId: "1:502487673628:web:61e1217077e5e8c940e8d9"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
 function logout()
 {
